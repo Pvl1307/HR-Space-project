@@ -1,0 +1,25 @@
+{% extends 'rh_kosmos/home.html' %}
+
+{% load rh_kosmos_tags %}
+
+
+{% block content %}
+<div class="container-fluid mt-5 pt-5">
+    <div class="row featurette box-shadow">
+        <div class="col-md-7 text-center">
+            <h2 class="my-4 font-weight-bold">{{ object.name }}</h2>
+            <p class="lead">{{ object.description }}</p>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <p><strong>Num of employees:</strong> {{ object.num_of_employees }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img class="img-fluid rounded" src="{{ object.logo|mymedia }}" alt="Blog Preview">
+            <p><strong>Contacts:</strong>email: {{ object.owner.email }}</p>
+            <p>Phone number: {{ object.owner.phone_number }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

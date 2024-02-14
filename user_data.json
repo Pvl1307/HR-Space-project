@@ -1,0 +1,182 @@
+[
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$J89AUkxNKtilD65RBYeARr$EFIaq//E0bcmfy4XHmHlNRHWcdfOjim3rSHOlZX4Izg=",
+      "last_login": "2024-02-10T11:05:17.562Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "Adminova",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:10:00.407Z",
+      "role": "APPLICANT",
+      "email": "admin@a.ru",
+      "phone_number": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$6MJ2gcO7vMxS9xy3Tc00j9$8seTjocj1XTaTtRMokh6Vnro4Gl1tLU/fPvk6mx2TXQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Анна",
+      "last_name": "Петрова",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:16:43Z",
+      "role": "RH",
+      "email": "anna@petrova.ru",
+      "phone_number": "+77899876778",
+      "avatar": "users/1663343474_15-mykaleidoscope-ru-p-cherti-litsa-zlogo-cheloveka-pinterest-15.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$ArxL220m3EQvxiOJmJe1vd$WbMTXCjO7tJo8QwHxwnxX2RKFWej/JKecCUXf04e+Do=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Ольга",
+      "last_name": "Хромова",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:17:42Z",
+      "role": "COMPANY",
+      "email": "olga@hromova.ru",
+      "phone_number": "+73455433445",
+      "avatar": "users/f43e007c6937e7801b5e0f939eed4db2.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$AXS3zYDx3tiLipxXKFQefb$HFOf3ghqwg8BJ4hWbdgm+r1+9W/bCgz1yGyCZjdNh8k=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Василиса",
+      "last_name": "Лисенкова",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:18:35Z",
+      "role": "APPLICANT",
+      "email": "vasilisa@lisenkiva.ru",
+      "phone_number": "+70001010011",
+      "avatar": "users/76875.jpeg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$4gE9vwiqSgvOA1eMDGFkss$KmNmEOnGcLmxhVcxaEvoVbj3OCsKdROslhzy/lAmdC8=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Софья",
+      "last_name": "Веселая",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:19:47Z",
+      "role": "RH",
+      "email": "sofya@veselaya.ru",
+      "phone_number": "+77777777777",
+      "avatar": "users/7cc7427aaa88b0ff1c3fe1b1e0e73446.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$ccA3fJducTtIQSRsqHpvDp$q4cFYhaq2ltECQnH1xGGEyRqD5GbCOe8/Z+u5q75AdY=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Дмитрий",
+      "last_name": "Чехов",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:20:49Z",
+      "role": "COMPANY",
+      "email": "dmitrii@chehov.ru",
+      "phone_number": "+78888888888",
+      "avatar": "users/1663110850_6-mykaleidoscope-ru-p-spokoinii-chelovek-vkontakte-8.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fu2shOuXJm5S74ZrjxDcmJ$YaXlL21rBeLMsTjbXKezuI4AoFfCTyTlV+BnOD8+IR4=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Василий",
+      "last_name": "Сомов",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:21:38Z",
+      "role": "RH",
+      "email": "vasilii@somov.ru",
+      "phone_number": "+72222222222",
+      "avatar": "users/shutterstock_89664316.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$tNOhIuZcQ1ubtRRCRo2GVw$NrpmivivKrWxMsbw72rIUiXf2+6rZuERvCYD40cnTYo=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Иван",
+      "last_name": "Руков",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-09T21:22:28Z",
+      "role": "COMPANY",
+      "email": "ivan@rukov.ru",
+      "phone_number": "+71111111111",
+      "avatar": "users/fNo-expression-portrait-photography-photography-photo-shoot-muscle-.jpg",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$zfzUs29BXrAZhMTorgL02B$RLXcVXnaDSUZGrr7veWm1vANLVTfLa3/h08rXqeh+Wk=",
+      "last_login": "2024-02-14T15:13:23.306Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "Adminovdd",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-02-11T15:18:37.003Z",
+      "role": "RH",
+      "email": "admin@admin.ru",
+      "phone_number": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

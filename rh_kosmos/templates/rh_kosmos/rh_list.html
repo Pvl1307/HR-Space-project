@@ -1,0 +1,22 @@
+{% extends 'rh_kosmos/home.html' %}
+
+{% load rh_kosmos_tags %}
+
+{% block content %}
+<div class="container-fluid mt-5 pt-5">
+    <div class="row row-cols-1 row-cols-md-4">
+        {% for rh in object_list %}
+        <div class="col mb-4">
+            <div class="card h-100 d-flex flex-column">
+                <img class="card-img-top" src="{{ rh.rh.avatar|mymedia }}" alt="blog-preview">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ rh.rh.first_name }} {{ rh.rh.last_name }}</h5>
+                    <p class="card-text flex-grow-1">{{ rh.rh.services|slice:50 }}</p>
+                    <a href="{% url 'rh_kosmos:rh_detail' pk=rh.pk %}" class="btn btn-primary mt-auto">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

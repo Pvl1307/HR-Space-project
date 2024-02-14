@@ -1,0 +1,116 @@
+{% extends 'rh_kosmos/home.html' %}
+{% load rh_kosmos_tags %}
+
+{% block content %}
+
+<main style="margin-top: 56px;">
+
+    <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            {% for post in post_list %}
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ forloop.counter0 }}"
+                    {% if forloop.first %}class="active" {% endif %} aria-label="Slide {{ forloop.counter }}">
+            </button>
+            {% endfor %}
+        </div>
+        <div class="carousel-inner">
+
+            {% for post in post_list %}
+            <div class="carousel-item{% if forloop.first %} active{% endif %}" style="height: 500px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="img-container">
+                                <img src="{{ post.photo|mymedia }}" class="d-block mx-auto img-fluid"
+                                     alt="Post Image"
+                                     style="height: 100%; width: 100%; object-fit: cover; margin-top: -110px; margin-bottom: -50px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="carousel-caption text-start"
+                                 style="color: black; background-color: rgba(255, 255, 255, 0.7); padding: 20px;">
+                                <h1>{{ post.title }}</h1>
+                                <p class="opacity-75">{{ post.content }}</p>
+                                <p><a class="btn btn-lg btn-primary"
+                                      href="{% url 'blog:blog_detail' pk=post.pk %}">Читать</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"
+                style="color: gray;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"
+                style="color: gray;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container marketing">
+
+        <div class="text-center mb-4">
+            <h2 class="fw-normal">Our best RHs</h2>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="row">
+            {% for top_rh in rh_list %}
+
+            <div class="col-lg-4">
+                <div class="bd-placeholder-img rounded-circle" style="width: 140px; height: 140px; overflow: hidden;">
+                    <img src="{{ top_rh.rh.avatar|mymedia }}" alt="{{ top_rh.rh.first_name }}"
+                         class="img-fluid rounded-circle" style="object-fit: cover; width: 100%; height: 100%;">
+                </div>
+                <h2 class="fw-normal">{{ top_rh.rh.first_name }}</h2>
+                <p><a class="btn btn-secondary" href="{% url 'rh_kosmos:rh_detail' pk=top_rh.pk %}">Info &raquo;</a></p>
+            </div>
+            {% endfor %}
+
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="text-center mb-4">
+            <h2 class="fw-normal">Our satisfied clients</h2>
+        </div>
+
+        {% for review in reviews_list %}
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">
+                    {{ review.owner.first_name }} {{ review.owner.last_name }}</h2>
+                <p class="lead">{{ review.content }}</p>
+                <p class="lead">
+                    {% for _ in ""|rjust:review.mark %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         class="bi bi-star-fill" viewBox="0 0 16 16" style="color: #FFD700;">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    {% endfor %}
+
+                </p>
+            </div>
+            <div class="col-md-4 offset-md-1 text-right">
+                <img src="{{ review.owner.avatar|mymedia }}" alt="{{ top_rh.rh.first_name }}"
+                     class="img-fluid rounded-circle" style="object-fit: cover; width: 80px; height: 80px;">
+                <!-- Adjust the width and height values according to your preference -->
+            </div>
+        </div>
+        {% endfor %}
+        <hr class="featurette-divider">
+
+
+    </div>
+
+
+    {% endblock %}

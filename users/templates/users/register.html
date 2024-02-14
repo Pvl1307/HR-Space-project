@@ -1,0 +1,26 @@
+{% extends 'rh_kosmos/home.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto text-center">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Регистрация
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data" style="text-align: left;">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-outline-success">
+                            Register
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
