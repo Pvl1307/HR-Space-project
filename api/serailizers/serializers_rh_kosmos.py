@@ -6,22 +6,22 @@ from rh_kosmos.models import Company, Applicant, RH, Vacancy
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = '__all__'
+        fields = ('name', 'description', 'num_of_employees', 'logo',)
 
 
 class ApplicantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Applicant
-        fields = '__all__'
+        fields = ('applicant', 'skills', 'status_of_searching',)
 
 
 class RHSerializer(serializers.ModelSerializer):
     class Meta:
         model = RH
-        fields = '__all__'
+        fields = ('rh', 'services', 'price', 'subscription',)
 
 
 class VacancySerializer(serializers.ModelSerializer):
     class Meta:
         model = Vacancy
-        fields = '__all__'
+        fields = ('owner', 'title', 'description', 'salary',)

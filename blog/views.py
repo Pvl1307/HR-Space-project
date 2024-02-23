@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, View
 
-from blog.models import Post, Reviews, Category
+from blog.models import Post, Reviews
 from blog.tasks import change_post_category
 from rh_kosmos.models import RH
 
@@ -9,14 +9,10 @@ from rh_kosmos.models import RH
 class BlogListView(View):
     template_name = 'blog/blog_list.html'
 
-    change_post_category.delay()
-
     def get(self, request, *args, **kwargs):
-        selected_category = Category.objects.order_by('?').first()
-
         change_post_category.delay()
 
-        posts = Post.objects.filter(category=selected_category)
+        posts = Post.objects.filter(category=change_post_category)
         top_rh_list = RH.objects.filter(subscription=True)
         review = Reviews.objects.filter(mark__gte=4)
 

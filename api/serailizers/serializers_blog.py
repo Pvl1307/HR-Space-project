@@ -6,22 +6,22 @@ from blog.models import Category, Post, Comment, Reviews
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = ('name',)
 
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = ('category', 'title', 'content', 'published_at', 'photo',)
 
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ('to_post', 'author', 'content', 'published_at',)
 
 
 class ReviewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reviews
-        fields = '__all__'
+        fields = ('owner', 'content', 'mark',)

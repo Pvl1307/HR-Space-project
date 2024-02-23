@@ -20,4 +20,4 @@ class RHAdmin(admin.ModelAdmin):
 
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
-    list_display = ('owner', 'title', 'description', 'salary', )
+    list_display = ('owner', 'title', 'description', 'salary',)

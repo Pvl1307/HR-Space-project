@@ -31,7 +31,7 @@ class PostViewSet(ModelViewSet):
     def get_permissions(self):
         if self.action == ['create', 'update']:
             self.permission_classes = [IsAdminUser]
-        elif self.action in 'retrieve':
+        elif self.action == 'retrieve':
             self.permission_classes = [AllowAny]
         elif self.action == 'destroy':
             self.permission_classes = [IsAdminUser]

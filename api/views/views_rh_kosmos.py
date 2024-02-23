@@ -46,7 +46,6 @@ class RHViewSet(ModelViewSet):
 class VacancyViewSet(ModelViewSet):
     serializer_class = VacancySerializer
     queryset = Vacancy.objects.all()
-    # permission_classes = [IsAuthenticated, IsOwnerOrAdmin]
 
     def perform_update(self, serializer):
         serializer.save()

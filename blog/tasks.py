@@ -10,7 +10,8 @@ logger = get_task_logger(__name__)
 
 @shared_task
 def change_post_category():
-    categories = Category.objects.all()
+    categories = Category.objects.order_by('?').first()
+
     current_category = random.choice(categories)
 
     posts = Post.objects.filter(category=current_category).values()
