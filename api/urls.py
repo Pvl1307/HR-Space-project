@@ -22,12 +22,12 @@ router.register(r'rh', RHViewSet, basename='rh')
 router.register(r'vacancy', VacancyViewSet, basename='vacancy')
 
 urlpatterns = [
-                  path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-                  path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-                  path('user_create/', UserCreateAPIView.as_view(), name='user_create'),
-                  path('user_list/', UserListAPIView.as_view(), name='user_list'),
-                  path('user_detail/<int:pk>/', UserRetrieveAPIView.as_view(), name='user_detail'),
-                  path('user_update/<int:pk>/', UserUpdateAPIView.as_view(), name='user_update'),
-                  path('user_delete/<int:pk>/', UserDestroyAPIView.as_view(), name='user_delete'),
-              ] + router.urls
+    path('user_create/', UserCreateAPIView.as_view(), name='user_create'),
+    path('user_list/', UserListAPIView.as_view(), name='user_list'),
+    path('user_detail/<int:pk>/', UserRetrieveAPIView.as_view(), name='user_detail'),
+    path('user_update/<int:pk>/', UserUpdateAPIView.as_view(), name='user_update'),
+    path('user_delete/<int:pk>/', UserDestroyAPIView.as_view(), name='user_delete'),
+] + router.urls
